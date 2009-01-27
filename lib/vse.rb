@@ -125,7 +125,7 @@ class VSE
   end
   
   def load_after_hours
-    tickers = @holdings.collect {|holding| holding[0]}
+    tickers = @holdings.collect {|holding| holding[0]}.uniq
     page = Nokogiri::HTML(open("http://www.marketwatch.com/Quotes/quotes.aspx?symb=#{tickers.join(',')}"))
 
     after_hours_array = {}
