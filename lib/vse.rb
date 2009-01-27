@@ -80,7 +80,7 @@ class VSE
   def load_portfolio_page
     page_form = @home.forms.first
 
-    page_form['__EVENTTARGET'] = @portfolio[:target]
+    page_form['__EVENTTARGET'] = portfolio[:target]
     page_form['__EVENTARGUMENT'] = ''
 
     return @agent.submit(page_form)
